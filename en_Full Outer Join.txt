@@ -1,0 +1,30 @@
+Hello, and welcome to working with full join. In this video, we will learn about
+creating a result set by joining all rows from two tables. At the end of this lesson,
+you will be able to explain the syntax of the Full Join Operator and interpret the result set.
+A join combines the rows from two or more tables based on a relationship between
+certain columns in these tables. There are two types of table joins: INNER JOIN and
+OUTER JOIN. There are three types of OUTER JOIN: LEFT OUTER JOIN, RIGHT OUTER JOIN,
+and FULL OUTER JOIN. This video explains FULL OUTER JOIN, or simply called FULL JOIN.
+The FULL JOIN keyword returns all rows from both tables. That is all rows from the
+left table and all rows from the right table. So, the FULL JOIN could return a very large
+result set. The terms left and right refer to the table on the left-hand side and
+the right-hand side of the diagram. In this diagram Table 1 is the left table.
+Based on our simplified library database model, we want to select all rows from the Borrower
+table and all rows fro m the Loan table. We do this by identifying the column in each
+table to link the tables. In this example, we do this b y matching the BORROWER ID.
+The column BORROWER ID exists in both tables. This is the syntax of the SELECT statement
+for a FULL JOIN. In the FROM clause, we identify the Borrower table as B , and the Loan table as L.
+This use of the letter B and the letter L is referred to as an alias.
+In this join, each column name is prefixed with either the letter B or L. This helps indicate which
+table each column is associated with. Using an alias is much easier than prefixing each
+table name with the whole table name. In this example, the criteria is the BORROWER
+ID column. For a FULL JOIN, we select all rows from the Borrower table and all rows
+from the Loan table. And here is the result set. The result set shows all rows
+from the Borrower table and all rows from the Loan table. There are eight rows in the
+result set.  All eight records from the Borrower table are listed with the corresponding
+data from the Loan table. However, in t he last three rows, the columns BorrowerID and
+Loan Date from the Loan table do not have a corresponding BorrowerID, s o a NULL value
+is returned. A Null value is returned because Borrowers Peters, Li, and Wong have never
+taken a book out on loan. Therefore, there is no corresponding BorrowerID value in the
+Loan table. Now you can explain the syntax of the Full Join Operator and interpret
+the result set, including a NULL value.  Thanks for watching this video.

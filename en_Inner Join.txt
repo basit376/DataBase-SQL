@@ -1,0 +1,40 @@
+Hello, and welcome to working with inner joins.  In this video, we will learn about
+joining two tables to create a result set. At the end of this lesson, you will be able
+to explain the SQL syntax to join two or more tables and interpret the result set.
+A simple SELECT statement retrieves data from one or more columns from a single table. The
+next level of complexity is retrieving data from two or more tables. This is referred
+to as joining tables. A join combines the rows from two or more tables based on a relationship
+between certain columns in these tables. There are two types of table joins: INNER
+JOIN and OUTER JOIN. The most common type of join is the INNER JOIN. An INNER JOIN
+matches the results from two tables and displays only the result set that matches the criteria
+specified in the query. An inner join returns only the rows that match.  Based on our
+simplified library database model, if we want to check the names of people who have borrowed
+a book, this information is split between two tables. We need to find the names of people
+from the Borrower table who are also listed in the Loan table. So we need to identify
+the relationship between the two tables. We do this by identifying a column in each
+table to link the tables. In this example, we do this by matching the BORROWER ID. Notice
+that the column BORROWER ID exists in both the Borrower table as the Primary Key, and
+the Loan table as the Foreign Key. A Primary Key uniquely identifies each row in a table.
+A Foreign Key is a set of columns referring to a primary key of another table. We use
+the INNER JOIN operator to match occurrences of the BORROWER ID in the Borrower table
+with occurrences of the BORROWER ID in the Loan table. This is the syntax of the
+SELECT statement for an INNER JOIN. In the FROM clause, we identify the Borrower table
+as B, and the Loan table as L. For this join, we select BorrowerID, LastName, and
+Country from the Borrower table,  and BorrowerID and LoanDate from the Loan table, on the condition
+that the BorrowerID in the Borrower table is equa l to the BorrowerID in the Loan table.
+Notice that in this join, each column name is prefixed with either the letter B or L.
+In SQL this prefix is referred to as an alias. Using an alias is much easier than rewriting
+the whole table name.  And here is the result set. The result set shows the rows
+from both tables that have the same Borrower ID. So far, we have seen an example
+of combining two tables. But what if you need to combine data from three or more different
+tables? You simply add new joins to the SQL statement. For example, we want to know
+which Borrowers have a book on loan, but we also want to know which copy of the book
+they have. This is how the three tables relate to each other.  In this case, we join
+the tables two by two. First we join the information from the Borrower table and the Loan table
+where the BorrowerIDs match. Then, we join the information from the Loan table and the
+Copy table where the CopyIDs match. We select the LastName from the Borrower table, the
+CopyID from the Loan table, and the Status from the Copy t able. And here is the
+result set. We see the name of the Borrower, the ID of each book and the status they have.
+There are five books on loan. If you wanted to add more tables, you simply add new joins
+to the SQL statement. Now you can explain the SQL syntax to join two or more tables
+and interpret the result set.  Thanks for watching this video.

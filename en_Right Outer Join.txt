@@ -1,0 +1,43 @@
+Hello, and welcome to working with right outer join.  In this video, we will learn
+about creating a result set by joining rows from two tables. At the end of this lesson
+you will be able to explain the syntax of the Right Outer Join Operator and interpret
+the result set. A join combines the rows from two or more tables based on a relationship
+between certain columns in these tables. There are two types of table joins: INNER JOIN
+and OUTER JOIN.  An OUTER JOIN is a specialized form of join. And, there are three types of
+OUTER JOIN: LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN. This video explains RIGHT
+OUTER JOIN, or simply called RIGHT JOIN. Looking at the diagram, the terms left and
+right refer to the table on the left-hand side and the right-hand side o f the diagram.
+In this diagram Table 1 is the left table. A RIGHT JOIN matches the results from two
+tables and display s all the rows from the right table, and combines the information
+with rows from the left table that match the criteria specified in the query.
+In this diagram, the result set of a RIGHT JOIN is all rows from both tables matching the
+criteria specified in the query, plus all non-matching rows from the RIGHT table.
+Based on our simplified library database model, if we want to check the status of all books out
+on loan, this information is split between two tables, the Loan table which includes
+the Borrower's ID and LoanDate, and the Borrower table which includes the Borrower's ID, FirstName
+and LastName. So we need to identify the relationship between the two tables. We do this by identifying
+the column in each table to link the tables. In this example, we do this by matching
+the BORROWER ID. Notice that the column BORROWER ID exists in both the Borrower table as the
+Primary Key, and the Loan table as the Foreign Key.  A Primary Key uniquely identifies each
+row in a table. A Foreign Key is a set of columns referring to a primary key of another table.
+In an OUTER JOIN, the first table specified in the FROM clause of the SQL statement
+is referred to as the LEFT table and the remaining table is referred to as the RIGHT table.
+This is the syntax of the SELECT statement for a RIGHT JO IN. In this example, the Borrower
+table is the first table specified in the FROM clause of the SELECT statement, so the
+Borrower table is the LEFT table, and the Loan table is the RIGHT table.
+Notice that in the FROM clause, we identify the Borrower table as B, and the Loan table as L.
+This use of the letter B and the letter L is referred to as an alias. In this join, each column
+name is prefixed with either the letter B o r L. This helps indicate which table each
+column is associated with. Using an alias is much easier than prefixing each column
+name with the whole table name.  In the FROM clause, the Loan table is listed on
+the right side of the join operator, therefore we will select all rows from the Loan table
+and combine this with the contents of the Borrower table based on the criteria specified
+in t he query. In this example, the criteria is the BORROWER ID column. For a RIGHT JOIN,
+we will select the following columns from the Loan table: BorrowerID, and LoanDate,
+and we will also select the following columns from the Borrower table: BorrowerID, LastName,
+and Country where the BorrowerID in the Loan table matches the BorrowerID in the Borrower table.
+And here is the result set. The result set shows each Borrower ID from
+the Loan table and the LoanDate for that Borrower where the BorrowerID in the Loan table
+also exists in the Borrower table. There are five rows in the result set.
+Now you can explain the syntax of the Right Outer Join Operator and interpret the result set.
+Thanks for watching this video.

@@ -1,0 +1,68 @@
+Hello, and welcome to working with left outer join.
+In this video, we will learn about creating a result set by joining rows from two tables.
+At the end of this lesson, you will be able to explain the syntax of the Left Outer Join
+Operator and interpret the result set.
+A join combines the rows from two or more tables based on a relationship between certain
+columns in these tables.
+There are two types of table joins: INNER JOIN and OUTER JOIN.
+An OUTER JOIN is a specialized form of join.
+And, there are three types of OUTER JOIN: LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL
+OUTER JOIN.
+This video explains LEFT OUTER JOIN, or simply called LEFT JOIN.
+Looking at the diagram, the terms left and right refer to the table on the left-hand
+side and the right-hand side of the diagram.
+In this diagram Table 1 is the left table.
+A LEFT JOIN matches the results from two tables and displays all the rows from the left table,
+and combines the information with rows from the right table that match the criteria specified
+in the query.
+In this diagram, a LEFT JOIN matches all the rows from Table 1, and combines the information
+with rows from Table 2 that match the criteria specified in the query.
+Based on our simplified library database model, if we want to check the status of all people
+to see what books they have borrowed, this information is split between two tables, the
+Borrower table and the Loan table.
+So we need to identify the relationship between the two tables.
+In this example, we do this by matching the BORROWER ID.
+Notice that the column BORROWER ID exists in the Borrower table as the Primary Key,
+and the Loan table as the Foreign Key.
+A Primary Key uniquely identifies each row in a table.
+A Foreign Key is a set of columns referring to a primary key of another table.
+In an OUTER JOIN, the first table specified in the FROM clause of the SQL statement is
+referred to as the LEFT table and the remaining table is referred to as the RIGHT table.
+This is the syntax of the SELECT statement for a LEFT JOIN.
+In this example, the Borrower table is the first table specified in the FROM clause of
+the SELECT statement, so the Borrower table is the LEFT table, and the Loan table is the
+RIGHT table.
+Notice that in the FROM clause, we identify the Borrower table as B, and the Loan table
+as L. This use of the letter B and the letter L is referred to as an alias.
+In this join, each column name is prefixed with either the letter B or L. This helps
+indicate which table each column is associated with.
+Using an alias is much easier than prefixing each column name with the whole table name.
+In the FROM clause, Borrower is listed on the left side of the join operator, therefore
+we will select all rows from the Borrower table, and combine this with the contents
+of the Loan table based on the criteria specified in the query.
+In this example, the criteria is the BORROWER ID column.
+For a LEFT JOIN, we will select the following columns from the Borrower table: BorrowerID,
+LastName, and Country, and we will also select the following columns from the Loan table:
+BorrowerID, and LoanDate.
+The LEFT JOIN selects each BORROWER ID in the Borrower table, and displays the LoanDate
+from the Loan table.
+And here is the result set.
+The result set shows each Borrower ID from the Borrower table and the LoanDate for that
+Borrower.
+Notice there is a LoanDate for the first five rows, D1 through D5.
+However, for the last three rows, the Borrower ID and LoanDate show NULL values.
+Let?s take a closer look at this.
+A NULL value indicates an unknown value.
+When using a LEFT JOIN, if the right table does not have a corresponding value, a NULL
+value is returned.
+In this example, Borrowers Peters, Li, and Wong, whose BorrowerIDs are D8 D6 and D7,
+have never taken a book out on loan.
+Therefore, there is no corresponding BorrowerID value in the Loan table.
+In this example, the LEFT JOIN displayed all rows from the left table, the Borrower table,
+and combined the information with rows from the right table, the Loan table.
+The Borrower table contained rows for BorrowerID D8, D6, and D7.
+However, the Loan table did not contain rows for these BorrowerIDs.
+Therefore, the result set displayed NULL values for these BorrowerIDs.
+Now you can explain the syntax of the Left Outer Join Operator and interpret the result
+set, including a NULL value.
+Thanks for watching this video.

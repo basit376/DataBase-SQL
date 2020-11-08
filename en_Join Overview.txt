@@ -1,0 +1,32 @@
+Hello, and welcome to working with multiple tables. In this video,
+we will learn about joining two tables to create a result set. At the end of this lesson, you will b e able
+to define the join operator, explain the role of primary keys and foreign keys in a join
+operation, and list different types of join operators.  A simple SELECT statement retrieves
+data from one or more columns from a single table. The next level of complexity is retrieving
+data from two or more tables. This leads to multiple possibilities of how the result set
+is generated. To combine data from two tables, we use the JOIN operator. A join combines
+the rows from two or more tables based on a relationship between certain columns in
+these tables.  Based on the Book and Author entity examples, these are part of a simplified
+library database model. This Entity-Re lationship Diagram represents the Relational Data Model
+for the Author and Book entity, as well as other entities such as Borrower, Loan, Copy,
+and Author List. In this model, the information is split into different tables.
+If you wanted to know which borrower has which copy of a book out on loan, you need to gather
+data from three tables, the Borrower, Loan, and Copy tables. This is when you need to
+use the JOIN operator. With the JOIN operator, you are combining data from more
+than one table based on a relationship between certain columns in these tables. So the first
+thing you need to do is identify the relationship between those tables, that is, the column
+or columns in each table that will be used as the link between the tables. In this
+Entity-Relationship Diagram, notice that Author_ID, Book_ID, Borrower_ID and Copy_ID have the
+Primary Key icon. A Primary Key uniquely identifies each row in a table. Notice
+also the entities on the lower half of the screen. Some attributes have FK in brackets
+next to them. For example, the Copy entity has attribute Book_ID with the FK in brackets.
+This identifies the Foreign Key. A Foreign Key is a set of columns referring to a primary
+key of another table. So, if you wanted to know which borrower has a book out on loan,
+you need to gather data from the Borrower and Loan tables. You will need the Borrower_ID
+from both tables. SQL offers you several different types of joins. It all depends on
+what you are looking for. For example, you can extract a data set corresponding to the
+intersection of the two tables involved. Or you can choose a larger data set. You can
+go up to the point of selecting the combination of all the data from those two tables.
+Now you can define the join operator, explain the role of primary keys and foreign keys
+in a join operation, and list different types of join operators. Thanks for watching
+this video.
